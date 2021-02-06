@@ -233,6 +233,12 @@ button {
   width: 50%;
 }
 
+@media (min-width: 768px) and (max-width: 1139px) {
+  #header__app-info {
+    padding-top: 100px;
+  }
+}
+
 #header__app-info__content #tick {
   width: 362px;
   height: 35px;
