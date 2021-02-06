@@ -1,0 +1,22 @@
+// Chứa code định nghĩa cho layout của project như header, footer, navigation, grid
+@import "navbar";
+@import "header";
+@import "trusted-by";
+@import "app-features";
+@import "smart-jackpots";
+@import "designed-build-by";
+@import "choose-app-reason";
+@import "ultimate-features";
+@import "get-awesome-features";
+@import "meet-client";
+@import "footer";
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+@include tablet {
+  .container {
+    padding: 0 15px;
+  }
+}

@@ -1,0 +1,44 @@
+#ultimate-features {
+	overflow: hidden; 
+  &__content{
+    @include tablet{
+      text-align: center;
+    }
+    h2 {
+      margin-top: 185px;
+      @include formatFontTitle(36px, 46px);
+      width: 35%;
+      @include tablet{
+        width: 100%;
+        margin-top: 50px;
+      }
+    }
+    > p {
+      margin-top: 11px;
+      margin-bottom: 55px;
+      width: 40%;
+      @include tablet{
+        width: 100%;
+      }
+    }
+    @extend %formatFontFeaturesParagraph;
+  }
+	&__list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px 106px;
+    @extend %formatFontFeaturesTitle;
+  }
+  &--btn{
+    margin-top: 50px;
+    @extend %formatButtonLink;
+  }
+	&--img{
+		float: right;
+		margin-right: -328px;
+		margin-top: 30px;
+    @include tablet{
+      display: none;
+    }
+	}
+}

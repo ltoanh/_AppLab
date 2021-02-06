@@ -1,0 +1,73 @@
+#meet-client {
+  display: flex;
+  margin-bottom: 135px;
+  &--img {
+    z-index: -1;
+    margin: 235px 0 auto -215px;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__content {
+    width: 50%;
+    margin-left: -15px;
+    margin-top: 153px;
+    h2 {
+      @include formatFontTitle(40px, 50px);
+      margin-bottom: 20px;
+      width: 90%;
+    }
+    > p {
+      @include formatFontParagraph(16px, 26px);
+      margin-bottom: 14px;
+      width: 90%;
+    }
+    @include tablet {
+      width: 100%;
+      margin: 120px 0 0 0;
+      text-align: center;
+      h2,
+      p {
+        width: 100%;
+      }
+    }
+    &__description {
+      h3 {
+        @include formatFontTitle(20px, 58px);
+        margin-top: -8px;
+      }
+      p {
+        @include formatFontParagraph(16px, 26px);
+        margin-top: 7px;
+      }
+    }
+    &__human {
+      margin-top: 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include tablet {
+        justify-content: space-evenly;
+      }
+      &--inf {
+        display: flex;
+        align-items: center;
+        &--contact {
+          margin-left: 30px;
+          h4 {
+            @include formatFontTitle(18px, 58px);
+          }
+          p {
+            @include formatFontParagraph(18px, 28px);
+            margin-top: -10px;
+          }
+        }
+      }
+      &--paginate {
+        button {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}

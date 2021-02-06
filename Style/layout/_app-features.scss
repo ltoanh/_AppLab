@@ -1,0 +1,57 @@
+$this: app-features;
+##{$this} {
+  display: flex;
+  margin-top: 150px;
+  &--img {
+    margin-left: -125px;
+    @include tablet{
+      margin-left: -235px;
+    }
+  }
+  $list: __list;
+  $this: $this + $list;
+  &#{$list} {
+    margin-left: 20px;
+    width: 38%;
+    @include tablet{
+      width: 100%;
+    }
+    h2 {
+      @include formatFontTitle(36px, 46px);
+			margin-bottom: 21px;
+		}
+    > p {
+      @include formatFontParagraph(16px, 26px);
+      margin-bottom: 74px;
+      @include tablet{
+        margin-bottom: 30px;
+      }
+    }
+    .#{$this}__feature {
+      width: calc(100% - 30px);
+      @include tablet{
+        width: 100%;
+      }
+      display: flex;
+      align-items: center;
+      >img{
+        @include tablet{
+          display: none;
+        }
+      }
+      &--content {
+				margin-bottom: 43px;
+        margin-left: 33px;
+        h3 {
+          font-size: 20px;
+          line-height: 58px;
+          font-family: $fontPoppinsSemiBold;
+          margin-bottom: -5px;
+        }
+        p {
+          @include formatFontParagraph(16px, 26px);
+        }
+      }
+    }
+  }
+}

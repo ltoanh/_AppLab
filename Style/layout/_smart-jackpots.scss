@@ -1,0 +1,37 @@
+#smart-jackpots {
+  display: flex;
+  align-items: center;
+  &--title {
+    padding-left: 57px;
+    @include tablet{
+      padding-left: 0;
+    }
+    position: relative;
+    h2 {
+      @include formatFontTitle(40px, 50px);
+      padding-right: 76px;
+      @include tablet{
+        line-height: 45px;
+        padding-right: 40px;
+      }
+    }
+    &::after {
+      content: "";
+      border-right: 1px solid black;
+      position: absolute;
+      top: 5px;
+      bottom: 5px;
+      right: 0;
+    }
+  }
+  &--description {
+    padding-left: 48px;
+    p {
+      @include formatFontParagraph(16px, 26px);
+      width: 70%;
+      @include tablet{
+        width: 100%;
+      }
+    }
+  }
+}

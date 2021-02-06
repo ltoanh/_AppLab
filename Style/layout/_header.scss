@@ -1,0 +1,73 @@
+#header {
+  margin-top: 20px;
+  background: #fff url(Images/Images/header-background.png) no-repeat
+    center;
+  background-size: cover;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 70px;
+    @include tablet{
+      padding-left: 15px;
+      margin-bottom: 50px;
+    }
+  } 
+  &__app-info {
+    padding-top: 226px;
+    width: 50%;
+    &__content {
+      #tick {
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: "";
+          background: #feaa25 url(Images/Icons/tick.png) no-repeat center;
+          display: inline-block;
+          width: 40px;
+          height: 35px;
+          border-radius: 999px;
+        }
+        width: 362px;
+        height: 35px;
+        padding-left: 48px;
+        font-size: 18px;
+        line-height: 37px;
+        font-family: $fontPoppinsMedium;
+        color: $fontColorTitle;
+        position: relative;
+        border-radius: 999px;
+        background-color: #e2eaed;
+        margin-bottom: 16px;
+      }
+      h1 {
+        @include formatFontTitle(60px, 75px);
+        margin-bottom: 13px;
+        @include tablet{
+          font-size: 54px;
+        }
+      }
+      p {
+        @include formatFontParagraph(18px, 28px);
+        margin-bottom: 35px;
+      }
+    }
+    &__demo {
+      @extend %formatButtonLink;
+      > a {
+        @include formatFontParagraph(16px, 44px);
+        margin-left: 22px;
+        color: $fontColorLink;
+        @include tablet{
+          display: inline-block;
+        }
+      }
+    }
+  }
+    &--img{
+      img{
+        width: 100%;
+
+      }
+    }
+}

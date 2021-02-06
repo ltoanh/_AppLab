@@ -1,0 +1,44 @@
+#choose-app-reason {
+  text-align: center;
+  padding-top: 136px;
+  h2 {
+    @include formatFontTitle(36px, 46px);
+    width: 40%;
+    margin: 0 auto 55px;
+    @include tablet {
+      font-size: 40px;
+      margin-bottom: 30px;
+      width: 100%;
+    }
+  }
+  > p {
+    width: 57%;
+    margin: 0 auto 84px;
+    @include tablet{
+      margin-bottom: 50px;  
+    }
+  }
+  @extend %formatFontFeaturesParagraph;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 65px 87px;
+    padding: 0 70px;
+    @extend %formatFontFeaturesTitle;
+    @include tablet {
+      grid-template-columns: 1fr;
+      .features-app-reason{
+        display: flex;
+        align-items: center;
+        &__description{
+          text-align: left;
+          margin-left: 15px;
+          h3{
+            margin-top: 0;
+          }
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,40 @@
+#designed-build-by {
+  position: relative;
+  .container {
+    display: flex;
+    margin-top: 110px;
+    padding-bottom: 73px;
+    @include tablet {
+      display: block;
+    }
+  }
+  &--img {
+    margin-left: -60px;
+    margin-right: 114px;
+    @include tablet {
+      margin-left: 10%;
+      margin-right: 0;
+    }
+  }
+  &__content {
+    margin-top: 137px;
+    width: 35%;
+    @include tablet {
+			margin: 20px auto 0;
+			width: 70%;
+			text-align: center;
+		}
+    h2 {
+      @include formatFontTitle(36px, 46px);
+      margin-bottom: 20px;
+    }
+    p {
+      @include formatFontParagraph(16px, 26px);
+      margin-bottom: 33px;
+    }
+    @extend %formatButtonLink;
+  }
+  &::after {
+    @extend %makeLineAfterContent;
+  }
+}

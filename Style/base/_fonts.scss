@@ -1,0 +1,57 @@
+/* install font */
+@font-face {
+  font-family: "Poppins-bold";
+  src: url(Fonts/Poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Poppins-semibold";
+  src: url(Fonts/Poppins/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Poppins-medium";
+  src: url(Fonts/Poppins/Poppins-Medium.ttf);
+}
+// font
+$fontPoppinsBold: "Poppins-bold", sans-serif;
+$fontPoppinsMedium: "Poppins-medium", sans-serif;
+$fontPoppinsSemiBold: "Poppins-semibold", sans-serif;
+
+// font color
+$fontColorTitle: #242f51;
+$fontColorParagraph: #616368;
+$fontColorLink: #2500f9;
+$fontColorRed: #f55767;
+$fontColorBlue: #2563ff;
+$fontColorGreen: #40975f;
+$fontColorWhite: #ffffff;
+$fontColorSocial: #273043;
+$fontColorFooterDesign: #3d465a;
+
+@mixin formatFontParagraph($fontSize, $lineHeight) {
+  font-family: $fontPoppinsMedium;
+  color: $fontColorParagraph;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+@mixin formatFontTitle($fontSize, $lineHeight) {
+  font-family: $fontPoppinsSemiBold;
+  color: $fontColorTitle;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+.color-title-red{
+  color: $fontColorRed;
+}
+
+.color-title-blue{
+  color: $fontColorBlue;
+}
+
+.color-title-green{
+  color: $fontColorGreen;
+}
+

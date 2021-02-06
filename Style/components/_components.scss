@@ -1,0 +1,104 @@
+// chứa code cho các thành phần (components) mà có thể reusable cho trang của bạn như buttons, forms, cards, v.v.
+@import 'responsive';
+
+$colorRatingStar: #ffcc00;
+$backgroundColorFooter: #09142e;
+$cardTitleBackgroundColor: #f4f7f9;
+$borderColorEB: #ebebeb;
+button {
+  cursor: pointer;
+}
+
+%formatButtonLink {
+  button {
+    display: inline-block;
+    width: 170px;
+    height: 57px;
+    border-radius: 999px;
+    background-color: $fontColorLink;
+    a {
+      color: #ffffff;
+      font-family: $fontPoppinsBold;
+    }
+  }
+}
+
+%formatFontFeaturesParagraph {
+  p {
+    @include formatFontParagraph(16px, 26px);
+  }
+}
+
+%formatFontFeaturesTitle {
+  h3 {
+    margin-top: 20px;
+    @include formatFontTitle(20px, 58px);
+    margin-bottom: -5px;
+  }
+}
+
+.card-charges {
+  cursor: pointer;
+  border: 2px solid $borderColorEB;
+  border-radius: 10px;
+  width: 317px;
+  height: 100%;
+  &__header {
+    height: 40%;
+    width: 100%;
+    background-color: $cardTitleBackgroundColor;
+    border-radius: 10px 10px 0 0;
+    padding-top: 65px;
+    &--price {
+      span {
+        @include formatFontTitle(60px, 58px);
+      }
+      @include formatFontParagraph(18px, 28px);
+    }
+    h4 {
+      margin-top: 26px;
+      @include formatFontTitle(20px, 28px);
+    }
+    p:last-of-type {
+      @include formatFontParagraph(16px, 28px);
+    }
+  }
+  &__content {
+    padding-top: 24px;
+    li {
+      @include formatFontParagraph(16px, 48px);
+    }
+    @extend %formatButtonLink;
+    button {
+      margin-top: 22px;
+      width: 210px;
+      margin-bottom: 25px;
+    }
+    > a {
+      @include formatFontParagraph(16px, 28px);
+      color: $fontColorLink;
+      display: inline-block;
+      margin-bottom: 23px;
+    }
+  }
+  &:hover {
+    box-shadow: -3px 20px 10px 0px #90a3b1;
+  }
+}
+
+%makeLineAfterContent {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 2px solid $borderColorEB;
+}
+
+.rating-star{
+  font-size: 20px;
+  line-height: 58px;
+  .checked {
+    color: $colorRatingStar;
+  }
+}

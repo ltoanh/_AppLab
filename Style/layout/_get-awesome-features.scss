@@ -1,0 +1,54 @@
+#get-awesome-features {
+  position: relative;
+  .container {
+    padding-top: 170px;
+    text-align: center;
+    h2 {
+      @include formatFontTitle(36px, 46px);
+      width: 55%;
+      margin: 0 auto 24px;
+    }
+    > p {
+      @include formatFontParagraph(16px, 26px);
+      width: 57%;
+      margin: 0 auto 78px;
+    }
+  }
+  &--choose {
+    padding-bottom: 104px;
+    &__types {
+      margin: 0 auto 39px;
+      width: 284px;
+      height: 57px;
+      border: 2px solid #ebebeb;
+      border-radius: 999px;
+      display: flex;
+      flex-grow: 1 1;
+      button {
+        width: 50%;
+        border-radius: 999px;
+        background-color: transparent;
+        a {
+          @include formatFontParagraph(16px, 44px);
+        }
+        &:hover {
+          background-color: $fontColorLink;
+          a {
+            color: $fontColorWhite;
+            font-family: $fontPoppinsBold;
+          }
+        }
+      }
+    }
+    &__charges {
+      display: flex;
+      justify-content: center;
+      .card-charges:first-of-type {
+        margin-right: 38px;
+      }
+    }
+  }
+  &::after {
+    @extend %makeLineAfterContent;
+  }
+}

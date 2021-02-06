@@ -1,0 +1,40 @@
+#footer {
+  background-color: $backgroundColorFooter;
+  text-align: center;
+  img {
+    margin-top: 115px;
+	}
+	ul{
+		margin-top: 38px;
+		display: flex;
+		justify-content: center;
+
+	}
+  &__list {
+		margin-bottom: 32px;
+		li{
+			margin-left: 37px;
+			a{
+				@include formatFontParagraph(16px, 44px);
+				color: $fontColorWhite;
+			}
+		}
+	}
+	&__social{
+		margin-bottom: 32px;
+		li{
+			margin-left: 23px;
+			a{
+				@include formatFontParagraph(30px, 44px);
+				color: $fontColorSocial;
+				&:hover{
+					color: $fontColorWhite;
+				}
+			}
+		}
+	}
+	p{
+		@include formatFontParagraph(14px, 44px);
+		color: $fontColorFooterDesign;
+	}
+}
